@@ -12,6 +12,7 @@ export interface ChardsProps {
 const Chards: React.SFC<ChardsProps> = ({ data }) => {
 
     const classes = useStyles();
+    console.log(data)
 
     return ( 
         <div className={classes.container}>
@@ -20,7 +21,7 @@ const Chards: React.SFC<ChardsProps> = ({ data }) => {
                     title='Infected' bodyText='Number of active cases of COVID-19'/>
 
                 <CardItem subData={data?.recovered}  lastUpdate={data?.lastUpdate} style={cx(classes.recovered, classes.card)} 
-                    title='Recovered' bodyText='Number of recoveries from COVID-19'/>
+                    title='Recovered (currently no data)' bodyText='Number of recoveries from COVID-19'/>
 
                 <CardItem subData={data?.deaths}  lastUpdate={data?.lastUpdate} style={cx(classes.deaths, classes.card)} 
                     title='Deaths' bodyText='Number of deaths caused by COVID-19'/>
